@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\Controlls\DestroyByTime.cs" />
      <Compile Include="Assets\Scripts\Controlls\EmitionBySpeed.cs" />
      <Compile Include="Assets\Scripts\Controlls\Shipcontroll.cs" />
+     <Compile Include="Assets\Scripts\Controlls\SoundBySpeed.cs" />
+     <Compile Include="Assets\Scripts\Environment\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\Environment\Particlefield.cs" />
      <Compile Include="Assets\Scripts\Weapons\MG.cs" />
      <Compile Include="Assets\Scripts\Weapons\ProjectileMover.cs" />

@@ -18,9 +18,7 @@ public class Particlefield : MonoBehaviour {
 	}
 	
 	
-	IEnumerator _FieldRespawn () {
-		Debug.Log("<color=blue>INFO</color>Generate starfield.");
-		
+	IEnumerator _FieldRespawn () {		
 		
 		Vector3 po = player.transform.position;
 		Vector3[] p = new Vector3[9];

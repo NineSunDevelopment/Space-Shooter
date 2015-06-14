@@ -11,6 +11,9 @@ public class Shipcontroll : MonoBehaviour {
 	private Rigidbody rb;
 	private float drag;
 	
+	[Range(1,10)]
+	public int rotationSpeed;
+	
 	void Awake() {
 		rb = GetComponent<Rigidbody>();
 		drag = rb.drag;
@@ -18,7 +21,6 @@ public class Shipcontroll : MonoBehaviour {
 	
 	
 	void Update () {
-		Debug.Log("<color=blue>INFO</color> "+ Input.GetAxis("Mouse ScrollWheel"));
 		float axis = Input.GetAxis("Mouse ScrollWheel");
 		
 		if((-axis > 0 && cam.transform.position.y > 3)
@@ -62,20 +64,23 @@ public class Shipcontroll : MonoBehaviour {
 			transform.position.z
 		);
 		
-		
-		transform.LookAt(p);
-		cam.transform.position =new Vector3(
-			transform.position.x,
-			cam.transform.position.y,
-			transform.position.z
-			);
+		Quaternion targetRotation = Quaternion.LookRotation(p - transform.position);
+		transform.rotation = Quaternion.Slerp(
+			transform.rotation,
+			targetRotation,
+			rotationSpeed * Time.fixedDeltaTime
+		);
 		
 		
 		/*
 		 * Position
 		 */
 		rb.AddForce( transform.forward * Input.GetAxis("Vertical") * acc, ForceMode.Acceleration);
-		
+		cam.transform.position =new Vector3(
+			transform.position.x,
+			cam.transform.position.y,
+			transform.position.z );
+			
 		
 		/*
 		 * Boost

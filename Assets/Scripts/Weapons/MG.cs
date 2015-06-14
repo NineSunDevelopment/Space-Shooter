@@ -9,8 +9,8 @@ public class MG : MonoBehaviour {
 	public float reloadTime = 1;
 		
 	private float nextShot = 0;
-	private int shotsLeft = 0;
-	private float reloadLeft = 0;
+	public int shotsLeft = 0;
+	public float reloadLeft = 0;
 	
 	public AudioClip sound;
 	[Range(0,3)]
@@ -31,26 +31,31 @@ public class MG : MonoBehaviour {
 	void Update () {
 		nextShot -= Time.deltaTime;
 		
-		if(reloadLeft <= 0
-		&& shotsLeft > 0 
-		&& nextShot <= 0 
+		if(( shotsLeft > 0 || magSize == 0)
+		&& nextShot <= 0
 		&& Input.GetMouseButton(0)){
 			nextShot = fireRate;
-			shotsLeft--;
+			if(magSize != 0) shotsLeft -= 1;
 			audioSource.Play();
 			Instantiate(projectile, transform.position, transform.rotation);
 		}
 		
-		if(shotsLeft <= 0 
-		&& reloadLeft <= 0){
-			reloadLeft = reloadTime;
-		}
-		
-		if(shotsLeft <= 0
-	   	&& reloadLeft > 0){
-			reloadLeft -= Time.deltaTime;
-		}else{
-			shotsLeft = magSize;
+		if(magSize != 0){
+			if(shotsLeft <= 0 
+			&& reloadLeft <= 0){
+				reloadLeft = reloadTime;
+			}
+			
+			if(shotsLeft <= 0
+		   	&& reloadLeft > 0){
+				reloadLeft -= Time.deltaTime;
+			}
+			
+			if(shotsLeft <= 0
+		   	&& reloadLeft <= 0){
+				reloadLeft = reloadTime;
+				shotsLeft = magSize;
+			}
 		}
 	}
 }

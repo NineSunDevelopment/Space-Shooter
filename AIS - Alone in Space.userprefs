@@ -1,13 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Controlls\Shipcontroll.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Weapons\MG.cs">
     <Files>
-      <File FileName="Assets\Scripts\Environment\Particlefield.cs" Line="41" Column="48" />
+      <File FileName="Assets\Scripts\Controlls\Shipcontroll.cs" Line="22" Column="2" />
+      <File FileName="Assets\Scripts\Environment\Particlefield.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controlls\DestroyByTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Controlls\Shipcontroll.cs" Line="84" Column="17" />
-      <File FileName="Assets\Scripts\Controlls\EmitionBySpeed.cs" Line="21" Column="23" />
-      <File FileName="Assets\Scripts\Weapons\MG.cs" Line="34" Column="21" />
-      <File FileName="Assets\Scripts\Weapons\ProjectileMover.cs" Line="16" Column="53" />
+      <File FileName="Assets\Scripts\Controlls\EmitionBySpeed.cs" Line="22" Column="3" />
+      <File FileName="Assets\Scripts\Weapons\MG.cs" Line="38" Column="21" />
+      <File FileName="Assets\Scripts\Weapons\ProjectileMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controlls\SoundBySpeed.cs" Line="24" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
