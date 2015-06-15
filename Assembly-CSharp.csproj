@@ -52,8 +52,11 @@
      <Compile Include="Assets\Scripts\Controlls\SoundBySpeed.cs" />
      <Compile Include="Assets\Scripts\Environment\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\Environment\Particlefield.cs" />
+     <Compile Include="Assets\Scripts\Technical\EnergyShield.cs" />
      <Compile Include="Assets\Scripts\Weapons\MG.cs" />
      <Compile Include="Assets\Scripts\Weapons\ProjectileMover.cs" />
+     <None Include="Assets\Assets\Shader\EnergyShield.shader" />
+     <None Include="Assets\imported\batteries\SciFi_Battery_Pack_free\SCI-fi battery pack FREE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
